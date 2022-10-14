@@ -1,6 +1,7 @@
 const registerVideo = (bound, video) => {
 	bound = document.querySelector(bound);
 	video = document.querySelector(video);
+    console.log(bound, video)
 	const scrollVideo = ()=>{
 		if(video.duration) {
 			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
@@ -17,6 +18,6 @@ const registerVideo = (bound, video) => {
 
 registerVideo("#bound-one", "#bound-one video");
 
-registerVideo("#bound-two", "#bound-two video")
+// registerVideo("#bound-two", "#bound-two video")
 
-registerVideo("#bound-three", "#bound-three video")
+// registerVideo("#bound-three", "#bound-three video")
