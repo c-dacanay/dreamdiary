@@ -7,7 +7,6 @@ const registerVideo = (bound, video) => {
 			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
 			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
 			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
-			
 			video.currentTime = video.duration * percentScrolled;
 		}
 		requestAnimationFrame(scrollVideo);
@@ -18,6 +17,6 @@ const registerVideo = (bound, video) => {
 
 registerVideo("#bound-one", "#bound-one video");
 
-// registerVideo("#bound-two", "#bound-two video")
+registerVideo("#bound-two", "#bound-two video")
 
 // registerVideo("#bound-three", "#bound-three video")
