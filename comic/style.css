@@ -22,7 +22,6 @@
     font-style: normal;
 }
 
-
 * { box-sizing: border-box; }
 
 body {
@@ -37,25 +36,26 @@ h1, h2 {
     font-family: 'Cantique', 'Times New Roman', Times, serif;
     /* writing-mode: vertical-lr;
     text-orientation: sideways; */
-    font-size: 2rem;
 }
 
 h1 {
-    padding-top: 2em;
-    position: absolute;
+    padding: 1.5em;
+    padding-bottom: 0em;
+    font-size: 4rem;
 }
 
 h2 {
     font-size: 1.6rem;
-    padding-top: 22em;
-    padding-left: 3rem;
+    margin: 0em;
 }
 
 #title {
     position: absolute;
     z-index: 10;
-    writing-mode: vertical-lr;
-    text-orientation: sideways;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
 }
 
 #r-title {
@@ -67,9 +67,8 @@ h2 {
     font-size: .6em;
     width: 100vw;
     text-align: right;
-
-    position: fixed;
-    z-index: 100;
+    position: absolute;
+    /* z-index: 100; */
 }
 
 p {
