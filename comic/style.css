@@ -66,6 +66,7 @@ h2 {
     z-index: 100;
     /* background-color: black; */
 }
+
 #r-title {
     font-family: 'BasteleurBold', sans-serif;
     text-transform: uppercase;
@@ -78,7 +79,7 @@ h2 {
     top: 1px;
     text-align: right;
     position: sticky;
-    z-index: 0;
+    z-index: 2;
     line-height: 1.5em;
 }
 
@@ -105,5 +106,12 @@ p {
 
 video {
     width: 80%;
-    filter: contrast(200%);
+    mix-blend-mode: luminosity;
+    filter: contrast(1.25);
+    /* filter: contrast(200%); */
+}
+
+#bound-two {
+    /* mix-blend-mode: luminosity; */
+    /* filter: contrast(1.25); */
 }
