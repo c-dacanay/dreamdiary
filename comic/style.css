@@ -104,8 +104,9 @@ p {
     align-items: center;
 }
 
-video {
+/* video {
     width: 80%;
+<<<<<<< Updated upstream
     mix-blend-mode: luminosity;
     filter: contrast(1.25);
     /* filter: contrast(200%); */
@@ -115,3 +116,13 @@ video {
     /* mix-blend-mode: luminosity; */
     /* filter: contrast(1.25); */
 }
+=======
+} */
+
+#v0 {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+  }
+>>>>>>> Stashed changes
