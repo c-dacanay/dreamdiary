@@ -53,14 +53,14 @@ h2 {
 #title {
     position: absolute;
     z-index: 200;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     text-align: center;
 }
 
 #open {
     height: 100vh;
-    width: 100vw;
+    width: 90vw;
     filter: blur(1px) contrast(200%) opacity(8);
     position: sticky;
     z-index: 100;
@@ -77,50 +77,66 @@ h2 {
     font-size: .5em;
     text-align: right;
     position: sticky;
-    z-index: 2;
+    z-index: 20;
     line-height: 1.5em;
+    top: 1em;
+}
+
+.aside {
+    font-size: .5em;
+    padding-top: -1em;
 }
 
 p {
     color: white;
     max-width: 400px;
     line-height: 1.5em;
+    margin-bottom: 0em;
 }
 
 .scroll-bound {
-	height: 500vh;
+	height: 900vh;
+    /* background-color: grey; */
+    background-color: black;
 }
 
 .content {
     height: 100vh;
-    width: 100%;
     position: sticky;
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 2em;
 }
 
-/* video {
-    width: 80%;
-<<<<<<< Updated upstream
+video {
+    max-width: 100%;
     mix-blend-mode: luminosity;
-    filter: contrast(1.25);
-    /* filter: contrast(200%); */
+    filter: contrast(1.55);
 }
 
-#bound-two {
-    /* mix-blend-mode: luminosity; */
-    /* filter: contrast(1.25); */
-}
-=======
-} */
 
-#v0 {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    width: 100%;
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #000000;
   }
->>>>>>> Stashed changes
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 3px none #ffffff;
+  }
