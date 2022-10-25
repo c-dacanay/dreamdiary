@@ -21,5 +21,10 @@ const registerVideo = (bound, video) => {
 
 registerVideo("#bound-one", "#bound-one video");
 registerVideo("#bound-two", "#bound-two video")
-registerVideo("#bound-three", "#bound-three video")
+// registerVideo("#bound-three", "#bound-three video")
 registerVideo("#bound-four", "#bound-four video")
+registerVideo("#bound-five", "#bound-five video")
+registerVideo("#bound-six", "#bound-six video")
+registerVideo("#bound-seven", "#bound-seven video")
+registerVideo("#bound-eight", "#bound-eight video")
+// registerVideo("#bound-nine", "#bound-nine video")
