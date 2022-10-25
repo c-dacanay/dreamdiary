@@ -1,0 +1,56 @@
+
+@font-face {
+    font-family: 'Cantique';
+    src: url('./src/type/Cantique-Normal.woff2') format('woff2'),
+         url('./src/type/Cantique-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basteleur';
+    src: url('./src/type/Basteleur-Moonlight.woff2') format('woff2'),
+         url('./src/type/Basteleur-Moonlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BasteleurBold';
+    src: url('./src/type/Basteleur-Bold.woff2') format('woff2'),
+         url('./src/type/Basteleur-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	font-family: 'Basteleur', sans-serif;
+	font-size: 1.6rem;
+    background: black;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Cantique', 'Times New Roman', Times, serif;
+}
+
+p {
+    font-size: .8em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
