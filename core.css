@@ -46,12 +46,19 @@ p {
 a {
     color: white;
     text-decoration: none;
+    transition: opacity .4s ease;
 }
 
 a:hover {
     color: white;
+    opacity: .6;
 }
 
 a:visited {
     color: white;
 }
+
+#title-txt {
+    font-size: 1.2em;
+}
+   

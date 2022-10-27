@@ -35,10 +35,8 @@ a:hover {
 }
 
 #title-txt {
- margin-top: 8em;   
- font-size: 1.2em;
+    margin-top: 8em;   
 }
-
 
 #open {
     z-index: 100;
