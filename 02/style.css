@@ -20,6 +20,7 @@ small {
 }
 
 .dream {
+    opacity: 0 !important;
     position: absolute;
     z-index: 100;
     top: 2em;
@@ -67,19 +68,24 @@ small {
     transform-origin: 50% 100% 0;
 }
 
-.island, .island path {
-    -webkit-transition: fill 1s ease;
-    -moz-transition: fill 1s ease;
-    -o-transition: fill 1s ease;
-    transition: fill 1s ease;	 
+.island, .island path, .dream {
+    opacity: 1;
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
+    transition: opacity 2s ease;	 
 }
 
-.island:hover {
-    fill: red !important;
+.highlight {
+    fill: white !important;
 }
 
-.island:hover path{
-    fill: red !important;
+.quiet {
+    opacity: 0;
+}
+
+.dreaming {
+    opacity: 1 !important;
 }
 
 .st0{fill:#303030;}
