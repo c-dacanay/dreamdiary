@@ -34,6 +34,20 @@ a:hover {
     background: cover;
 }
 
+#scroll {
+    padding-top: 14em;
+}
+
+#scroll > small {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+#scroll > h1 {
+padding-top: 0;
+margin: 0;
+}
 #title-txt {
     margin-top: 8em;   
 }

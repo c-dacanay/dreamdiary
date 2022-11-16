@@ -55,7 +55,9 @@ small {
 }
 
 .dream > p {
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: .02em;
+    line-height: 1.5em;
 }
 
 #archipelago {
