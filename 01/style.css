@@ -121,26 +121,3 @@ video {
     mix-blend-mode: luminosity;
     filter: contrast(1.55);
 }
-
-
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #ffffff #000000;
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #000000;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
-    border-radius: 3px;
-    border: 3px none #ffffff;
-  }

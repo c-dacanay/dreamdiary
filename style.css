@@ -44,7 +44,7 @@ hr {
 .dream {
     font-family: 'Cantique', 'Times New Roman', Times, serif;
     font-size: 1em;
-    padding: em 0 0 5em;
+    margin: 0em;
     filter: blur(.2rem);
     display: block;
     transition: filter .8s;
