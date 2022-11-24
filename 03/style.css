@@ -1,0 +1,95 @@
+body {
+    overflow-x: hidden;
+}
+
+.title {
+    position: absolute;
+    padding: 2em;
+    font-size: .5em;
+    z-index: 100;
+}
+
+small {
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin: 0;
+}
+
+#title-txt {
+    margin: 0;
+}
+
+.dream-stuff {
+    width: 100vw;
+    background-color: pink;
+    height: 5000px;
+    overflow: auto;
+}
+
+.whisper {
+    display: none;
+}
+
+#w1 {
+    display: block;
+}
+
+#w6, #w1, #w3, #w5 {
+    width: 100%;
+    text-align: center;
+}
+
+#w2 {
+    margin-top: 15vh;
+    margin-left: 1em;
+}
+
+#w4 {
+    width: 100%;
+    margin-top: 80vh;
+    text-align: right;
+    margin-right: 1em;
+}
+
+/* WINDOW PANES */
+.window {
+    background-color: black;
+    position: fixed;
+    z-index: 2;
+    transition: .5s;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topbottom {
+    width: 100vw;
+}
+
+#top {
+    height: 10vw;
+}
+#bottom {
+    bottom: 0%;
+    height: 15vw;
+}
+
+.leftright {
+    height: 100vh;
+}
+#left {
+    width: 30vw;
+}
+#right {
+   right: 0%;
+   width: 30vw;
+}
+
+img {
+    max-height: 500px;
+    position: absolute;
+}
+
+/* DEBUG */
+/* .window {
+    opacity: .4;
+} */

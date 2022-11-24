@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../core.css">
+    <title>dreams from long ago ~ no. 2</title>
+</head>
+<body>
+    <div class="title">
+    <small><a href="../index.html">dreams from long ago</a></small>
+    <h2 id="title-txt">no. 3 ~ a window to the sun</h2></div>
+
+
+    <div class="window topbottom" id="top">
+        <p class="whisper" id="w3">bedsheets</p>
+        <p class="whisper" id="w5">take a deep breath</p>
+    </div>
+    <div class="window leftright" id="left">
+        <p class="whisper" id="w4">hands touch</p>
+    </div>
+    <div class="window leftright" id="right">
+        <p class="whisper" id="w2">cold air</p>
+    </div>
+    <div class="window topbottom" id="bottom">
+        <p class="whisper" id="w6">look at the light</p>
+        <p class="whisper" id="w1">your old window</p>
+        
+    </div>
+
+    <div class="dream-stuff">
+        <!-- <img src="../src/1.svg">
+        <img src="../src/2.svg">
+        <img src="../src/0.svg"> -->
+    </div>
+</body>
+
+<script>
+//frames
+let panes = [
+document.getElementById("top"), 
+document.getElementById("bottom"),
+document.getElementById("left"), 
+document.getElementById("right")
+]
+
+let tpane = document.getElementById("top");
+let bpane = document.getElementById("bottom");
+let lpane = document.getElementById("left");
+let rpane = document.getElementById("right");
+
+let frameSize = [
+    //top, bottom, left, right
+    [0, 0, 0, 0], //frame 0
+    [10, 15, 30, 30], // frame 1
+    [10, 10, 10, 60], //frame 2
+    [10, 10, 35, 35], //frame 3
+    [10, 10, 60, 10], //frame 4
+    [10, 7, 7, 7], //frame 5
+    [7, 10, 7, 7], //frame 6
+]
+
+let scrollDepth = [0, 600, 1200, 1800, 2400, 4000];
+
+//scrolly
+window.onscroll = function() {scrollFunction()};
+
+
+function scrollFunction() {
+    let readerScroll = document.documentElement.scrollTop;
+    let set = null;
+    // console.log(readerScroll, set)
+  if (readerScroll > scrollDepth[0] && readerScroll < scrollDepth[1]) {
+    changeFrame(1, set)
+  } else if (readerScroll > scrollDepth[1] && readerScroll < scrollDepth[2]) {
+    changeFrame(2, set)
+  } else if (readerScroll > scrollDepth[2] && readerScroll < scrollDepth[3])  {
+    changeFrame(3, set)
+  } else if (readerScroll > scrollDepth[3] && readerScroll < scrollDepth[4])  {
+    changeFrame(4, set)
+  } else if (readerScroll > scrollDepth[4] && readerScroll < scrollDepth[5])  {
+    changeFrame(5, set)
+  } else if (readerScroll > scrollDepth[5])  {
+    changeFrame(6, set)
+  }
+  else {
+    changeFrame(0, set)
+  }
+}
+
+function changeFrame(p, set) {
+    let panel = p;
+    tpane.style.height = frameSize[panel][0] + `vh`;
+    bpane.style.height = frameSize[panel][1] + `vh`;
+    lpane.style.width = frameSize[panel][2] + `vw`;
+    rpane.style.width = frameSize[panel][3] + `vw`;
+    listen(p);
+}
+
+function listen(p) {
+    let whispers = document.getElementsByClassName("whisper");
+    for (let i = 0; i < whispers.length; i++) {
+        whispers[i].style.display = "none";
+    }
+    let thiswhisper = document.getElementById("w" + p)
+    thiswhisper.style.display = "block";
+}
+
+// //drag & drop
+// let activeElement = null;
+// let offset_x;
+// let offset_y;
+// let last_z = 1;
+
+// document.body.addEventListener("mousedown", function (ev) {
+//   ev.preventDefault();
+//   activeElement = ev.target;
+
+//   let bounds = ev.target.getBoundingClientRect();
+
+//   offset_x = ev.clientX - bounds.left;
+//   offset_y = ev.clientY - bounds.top;
+//   activeElement.style.zIndex = last_z;
+//   last_z++;
+// });
+
+// document.body.addEventListener("mouseup", function (ev) {
+//   activeElement = null;
+// });
+
+// document.body.addEventListener("mousemove", function (ev) {
+//   let x = ev.clientX - offset_x;
+//   let y = ev.clientY - offset_y;
+//   if (activeElement) {
+//     activeElement.style.left = x + "px";
+//     activeElement.style.top = y + "px";
+//   }
+// });
+
+</script>
+</html>
