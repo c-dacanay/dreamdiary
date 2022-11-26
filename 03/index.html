@@ -31,7 +31,9 @@
     </div>
 
     <div class="memory">
-        <img id="img1" src="./src/test.png">
+        <img class="flashbulb" id="img1" src="./src/output1.gif">
+        <img class="flashbulb" id="img2" src="./src/output2.gif">
+                <img class="flashbulb" id="img3" src="./src/output3.gif">
     </div>
     <div class="dream-stuff">
         <p class="whisper" id="w7">wake up</p>
@@ -109,13 +111,26 @@ function changeFrame(p) {
 
 function listen(p) {
     if (p > 0) {
+    //display text
     let whispers = document.getElementsByClassName("whisper");
     for (let i = 0; i < whispers.length; i++) {
         whispers[i].style.display = "none";
     }
     let thiswhisper = document.getElementById("w" + p)
     thiswhisper.style.display = "block";
+
+    //display image
+    let flashbulb = document.getElementsByClassName("flashbulb");
+    for (let i = 0; i < flashbulb.length; i++) {
+        flashbulb[i].classList.add("forget");
     }
+    let thisflashbulb = document.getElementById("img" + p) 
+        thisflashbulb.classList.remove("forget");
+        console.log(flashbulb, thisflashbulb)
+    }
+
+
+    
 }
 
 // //drag & drop

@@ -102,10 +102,22 @@ small {
     position: fixed;
 }
 
-#img1 {
-    top: 0;
-    height: 100vh;
+.flashbulb {
+    position: absolute;
 }
+
+#img1, #img2, #img3 {
+    top: 0;
+    width: 100vw;
+    opacity: 1;
+    transition: 1s;
+}
+
+.forget {
+    opacity: 0 !important;
+}
+
+
 /* DEBUG */
 /* .window {
     opacity: .4;
