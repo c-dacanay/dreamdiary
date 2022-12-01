@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="title">
-    <small><a href="../index.html">dreams from long ago</a></small>
+    <small><a href="../index.html" id="title-link">dreams from long ago</a></small>
     <h2 id="title-txt">no. 3 ~ a window to the sun</h2></div>
 
 
@@ -32,13 +32,12 @@
 
     <div class="memory">
         <img class="flashbulb" id="img1" src="./src/output1.gif">
-        <img class="flashbulb" id="img2" src="./src/test3.gif">
-        <img class="flashbulb" id="img3" src="./src/test.gif">
-        <img class="flashbulb" id="img4" src="./src/test2.gif">
-        <!-- <img class="flashbulb" id="img5" src="./src/test4.gif"> -->
-        <img class="flashbulb" id="img5" src="./src/test5.gif">
-        <img class="flashbulb" id="img6" src="./src/test6.gif">
-        <img class="flashbulb" id="img7" src="./src/test4.gif">
+        <img class="flashbulb forget" id="img2" src="./src/test3.gif">
+        <img class="flashbulb forget" id="img3" src="./src/test.gif">
+        <img class="flashbulb forget" id="img4" src="./src/test2.gif">
+        <img class="flashbulb forget" id="img5" src="./src/test5.gif">
+        <img class="flashbulb forget" id="img6" src="./src/test6.gif">
+        <img class="flashbulb forget" id="img7" src="./src/test6.gif">
     </div>
     <div class="dream-stuff">
         <p class="whisper" id="w7">⇐ <a href="../index.html">wake up</a></p>
@@ -49,10 +48,10 @@
 
 <script>
 
-window.addEventListener("load", () => {
-  console.log('doop')
-  Window.scroll(0,0)
-})
+// window.addEventListener("load", () => {
+//   console.log('doop')
+//   Window.scroll(0,0)
+// })
 //frames
 let panes = [
 document.getElementById("top"), 
@@ -73,23 +72,23 @@ let frameSize = [
     [10, 10, 5, 65], //frame 2
     [10, 10, 35, 35], //frame 3
     [10, 10, 65, 5], //frame 4
-    [10, 7, 7, 7], //frame 5
-    [7, 10, 7, 7], //frame 6
+    [10, 7, 20, 20], //frame 5
+    [10, 7, 0, 0], //frame 6
     [0, 0, 0, 0] //frame 7
 ]
 
 let height = document.body.scrollHeight;
 let framenum = 7;
-console.log(height)
+// console.log(height)
 
 let scrollDepth = [0, (height/framenum), (height/framenum)*2, (height/framenum)*3, (height/framenum)*4, (height/framenum)*5, (height/framenum)*6, (height/framenum)*5, (height/framenum)*7];
-console.log(scrollDepth)
+// console.log(scrollDepth)
 //scrolly
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     let readerScroll = document.documentElement.scrollTop;
-    // console.log(readerScroll)
+    console.log(readerScroll)
   if (readerScroll > scrollDepth[0] && readerScroll < scrollDepth[1]) {
     changeFrame(1)
   } else if (readerScroll > scrollDepth[1] && readerScroll < scrollDepth[2]) {
@@ -136,7 +135,17 @@ function listen(p) {
     }
     let thisflashbulb = document.getElementById("img" + p) 
         thisflashbulb.classList.remove("forget");
-        console.log(flashbulb, thisflashbulb)
+        // console.log(flashbulb, thisflashbulb)
+    }
+
+    let title = document.getElementById('title-txt');
+    let link = document.getElementById('title-link');
+    if (p == 7) {
+    link.style.color = "black";
+    title.style.color = "black";
+    } else {
+      link.style.color = "white";
+    title.style.color = "white";
     }
 
 
