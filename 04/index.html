@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../core.css">
+    <title>dreams from long ago ~ no. 3</title>
+</head>
+<body>
+    <div class="title">
+      <canvas id="canvas" width="400" height="400"></canvas>
+    <svg width="100" height="100">
+      <rect id="square" width="100" height="100" x="25" y="25" fill="red" />
+    </svg>
+</body>
+
+
+<script>
+
+  // get a reference to the canvas element
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  // Set the growth rate to a value greater than 3 to make the function chaotic
+  const growthRate = 3.5;
+
+  // Set the initial value of x
+  let x = 0.5;
+
+  // create a new Path2D object
+  const path = new Path2D();
+
+  // move the starting point of the path to the center of the canvas
+  path.moveTo(canvas.width / 2, canvas.height / 2);
+
+  // Generate a sequence of random numbers using the logistic map
+  for (let i = 0; i < 100; i++) {
+    x = growthRate * x * (1 - x);
+
+    // add a line segment to the path at the current value of x
+    path.lineTo(x * canvas.width, i * 4);
+  }
+
+  // stroke the path on the canvas
+  ctx.stroke(path);
+
+  
+  // get a reference to the square element
+  const square = document.getElementById('square');
+  console.log(square)
+
+  // add a mousemove event listener to the square
+  square.addEventListener('mousemove', (event) => {
+    console.log(event)
+    // calculate the angle of rotation based on the current mouse position
+    const angle = Math.atan2(event.offsetY, event.offsetX);
+
+    // set the square's transform property to rotate it
+    square.style.transform = `rotate(${angle}rad)`;
+  });
+
+</script>
+</html>

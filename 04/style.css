@@ -1,0 +1,162 @@
+body {
+    overflow-x: hidden;
+}
+
+.title {
+    position: fixed;
+    padding: 2em;
+    font-size: .5em;
+    z-index: 100;
+}
+
+small {
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin: 0;
+}
+
+#title-txt {
+    margin: 0;
+}
+
+.dream-stuff {
+    width: 100vw;
+    /* background-color: black; */
+    height: 10000px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.dream-stuff > p {
+    bottom: 1em;
+    z-index: 1000;
+    /* background-color: black; */
+    width: fit-content;
+    padding: 1em;
+    color: white !important;
+}
+
+
+.whisper {
+    display: none;
+}
+
+#w1 {
+    display: block;
+}
+
+#w6, #w1, #w3, #w5 {
+    width: 100%;
+    text-align: center;
+}
+
+#w2 {
+    margin-top: 15vh;
+    margin-left: 1em;
+}
+
+#w3, #w5 {
+    bottom: 0;
+    position: absolute;
+}
+#w4 {
+    width: 100%;
+    margin-top: 80vh;
+    text-align: right;
+    margin-right: 1em;
+}
+
+#w7 {
+    display: block !important;
+    color: black;
+    margin: 2em;
+}
+
+/* WINDOW PANES */
+.window {
+    /* background-color: black; */
+    position: fixed;
+    z-index: 2;
+    transition: .5s;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topbottom {
+    width: 100vw;
+}
+
+#top {
+    height: 10vw;
+}
+#bottom {
+    bottom: 0;
+    height: 15vw;
+}
+
+.leftright {
+    height: 100vh;
+}
+#left {
+    width: 30vw;
+}
+#right {
+   right: 0%;
+   width: 30vw;
+}
+
+.memory {
+    position: fixed;
+}
+
+.flashbulb {
+    position: absolute;
+    opacity: 1;
+    transition: 1s;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#img1, #img2, #img3 {
+    top: 0;
+}
+
+#img1 {
+    width: 100vw;
+}
+
+#img2 {
+    width: 50vw;
+}
+
+#img3 {
+    width: 40vw;
+    left: 30vw;
+}
+
+#img4 {
+    width: 40vw;
+    left: 60vw;
+}
+
+#img5, #img6 {
+    width: 100vw;
+    /* top: -80vh; */
+}
+
+#img7 {
+    /* top: -80vh; */
+    width: 100vw;
+}
+
+.forget {
+    opacity: 0 !important;
+}
+
+
+/* DEBUG */
+/* .window {
+    opacity: .4;
+} */

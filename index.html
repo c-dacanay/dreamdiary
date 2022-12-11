@@ -18,49 +18,64 @@
     <span class="dream"><a href="./01/index.html">no. 1 ~ an open labyrinth</a></span>
     <span class="dream"><a href="./02/index.html">no. 2 ~ the archipelago</a></span>
     <span class="dream"><a href="./03/index.html">no. 3 ~ a window to the sun</a></span>
-    <span class="dream">no. 4 ~ the woman</span>
+    <!-- <span class="dream">no. 4 ~ the woman (under construction) </span> -->
     <!-- <span class="dream">no. 5 ~ but it came at a price</span> -->
     <!-- <span class="dream">no. 6 ~ the nail</span> -->
 
     
     <hr>
-    <p>about</p>
+    <p id="abt-target" onclick="toggleModal()">about</p>
     </div>
 
     <div class="modal">
         <div class="content">
-        <p><span id="call">dreams from long ago</span> is a series of micro-webcomics made by christina dacanay.</p>
+        <p><span id="call">dreams from long ago</span> is a series of micro-webcomics created by <a href="http://www.cdacanay.com" target="_blank">christina dacanay</a>.</p>
         <div id="credits">
-            <span>credits</span>
+            <span id="c-title">additional credits</span>
             <small>no. 1</small>
+            <p>some 3d assets from Sparktree</p> 
+            <!-- <small>no. 2</small>
+            <p>hehe</p>  -->
+            <!-- <small>no. 3</small>
             <p>hehe</p> 
             <p>hehe</p>
             <p>hehe</p>
             <p>hehe</p>
-            <p>hehe</p>
-            <small>no. 2</small>
+            <p>hehe</p> -->
+            <!-- <small>no. 4</small>
             <p>hehe</p> 
             <p>hehe</p>
             <p>hehe</p>
             <p>hehe</p>
-            <p>hehe</p>
-            <small>no. 3</small>
-            <p>hehe</p> 
-            <p>hehe</p>
-            <p>hehe</p>
-            <p>hehe</p>
-            <p>hehe</p>
-            <small>no. 4</small>
-            <p>hehe</p> 
-            <p>hehe</p>
-            <p>hehe</p>
-            <p>hehe</p>
-            <p>hehe</p>
-
+            <p>hehe</p> -->
         </div>
         </div>
     </div>
 
+<script>
+
+var modal = document.querySelector('.modal');
+var trigger = document.querySelector('#abt-target');
+
+function toggleModal() {
+    modal.style.display = modal.style.display === 'none' ? 'flex' : 'none';
+}
+
+window.addEventListener('click', function(event) {
+    if (event.target === trigger) {
+      return;
+    }
+
+    if (event.target === modal) {
+      toggleModal();
+    }
+  });
+    </script>
 
 </body>
+
+<script>
+
+
+</script>
 </html>
